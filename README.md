@@ -8,7 +8,7 @@ Auto-update on container start.
 
     docker create \
       --name=arma-server-web-admin \
-      --net=host
+      --net=host \
       -v /my/arma3/folder:/arma3 \
       -e GAME_PATH="/arma3" \
       -e GAME_TYPE="arma3" \
