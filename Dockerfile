@@ -14,6 +14,9 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Create application folder
 RUN mkdir /app
 
+# Create application user
+RUN useradd -u 123 -U -s /bin/false arma && usermod -G users arma
+
 # Download Arma Server Web Manager
 RUN git clone https://github.com/Dahlgren/arma-server-web-admin.git /app
 

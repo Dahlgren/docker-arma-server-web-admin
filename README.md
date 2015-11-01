@@ -12,6 +12,8 @@ Auto-update on container start.
       -v /my/arma3/folder:/arma3 \
       -e GAME_PATH="/arma3" \
       -e GAME_TYPE="arma3" \
+      -e PUID="$(id -u)" \
+      -e GUID="$(id -g)" \
       dahlgren/arma-server-web-admin
 
 ## Instructions
@@ -38,6 +40,8 @@ SERVER_PREFIX | Prefix on all server names
 SERVER_SUFFIX | Suffix on all server names
 USERNAME | Username used for HTTP Basic Auth
 PASSWORD | Password used for HTTP Basic Auth
+PUID | User id to run manager and servers as
+PGID | User group id to run manager and servers as
 
 ### Auth
 Both USERNAME and PASSWORD needs to be set for HTTP Basic Auth to be used.
