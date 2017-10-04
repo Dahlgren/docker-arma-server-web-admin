@@ -33,7 +33,7 @@ The following environment variables needs to be set:
 ## Environment Variables
 
 Key | Description
---- | --- | ---
+--- | ---
 GAME_PATH | Absolute folder path to game server in docker container
 GAME_TYPE | Type of game server,  https://github.com/Dahlgren/arma-server-web-admin#supported-games
 SERVER_PREFIX | Prefix on all server names
