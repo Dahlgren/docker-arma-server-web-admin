@@ -1,15 +1,7 @@
 FROM node:4.2.1
 
 # Install git
-RUN apt-get update
-RUN apt-get install -y git
-
-# Install arma dependencies
-RUN apt-get install -y lib32stdc++6
-
-# Cleanup apt files
-RUN apt-get clean
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update && apt-get install -y git lib32stdc++6 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Create application folder
 RUN mkdir /app
