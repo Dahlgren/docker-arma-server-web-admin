@@ -1,7 +1,7 @@
 FROM node:12-buster
 
 # Install git
-RUN apt-get update && apt-get install -y git lib32stdc++6 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y git lib32stdc++6 zlib1g:i386 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Create application folder
 RUN mkdir /app
