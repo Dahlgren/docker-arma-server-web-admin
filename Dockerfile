@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12-buster
 
 # Install git
 RUN apt-get update && apt-get install -y git lib32stdc++6 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
