@@ -7,7 +7,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y git lib
 RUN mkdir /app
 
 # Create application user
-RUN useradd -u 123 -U -m -s /bin/false arma && usermod -G users arma
+RUN useradd -u 123 -U -m -s /bin/false arma && usermod -G users arma && mkdir -p "/home/arma/.local/share/Arma 3" && mkdir -p "/home/arma/.local/share/Arma 3 - Other Profiles"
 
 # Download Arma Server Web Manager
 RUN git clone https://github.com/Dahlgren/arma-server-web-admin.git /app
